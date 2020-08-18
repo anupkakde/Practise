@@ -1,0 +1,20 @@
+<apex:page standardController="Job_Yourname__c">
+  	<apex:form id="form">
+  		<apex:pageBlock id="pb">
+  			<apex:pageBlockSection title="Job Details" id="jobDetails">
+  				<apex:inputField value="{!Job_Yourname__c.Active__c}"/>
+  				<apex:inputField value="{!Job_Yourname__c.Certification_Required__c}"/>
+  				<apex:inputField value="{!Job_Yourname__c.Qualification_Required__c}"/>
+  				<apex:inputField value="{!Job_Yourname__c.Required_Skills__c}"/>
+  				<apex:inputField value="{!Job_Yourname__c.Salary_Offered__c}"/>
+  				<apex:inputField value="{!Job_Yourname__c.Job_Types__c}"/>
+  				<apex:inputField value="{!Job_Yourname__c.Manager__c}"/>
+  				<apex:inputField value="{!Job_Yourname__c.Expires_On__c}"/>
+  				<apex:inputField value="{!Job_Yourname__c.Description__c}"/>
+  			</apex:pageBlockSection>
+  			<apex:pageBlockbuttons >
+  				<apex:commandButton value="Save" action="{!save}"/>
+  			</apex:pageBlockbuttons>
+  		</apex:pageBlock>
+  	</apex:form>
+</apex:page>

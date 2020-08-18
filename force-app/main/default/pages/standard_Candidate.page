@@ -1,0 +1,22 @@
+<apex:page standardController="Candidate_Yourname__c">
+	<apex:form id="candidateDetailsForm" >
+        <apex:pageBlock id="bp">
+  			<apex:pageBlockSection title="Candidate Details" id="candidateDetails">
+  				<apex:inputField value="{!Candidate_Yourname__c.Salutation__c}"/>
+  				<apex:inputField value="{!Candidate_Yourname__c.First_Name__c}"/>
+  				<apex:inputField value="{!Candidate_Yourname__c.Last_Name__c}"/>
+  				<apex:inputField value="{!Candidate_Yourname__c.DOB__c}"/>
+  				<apex:inputField value="{!Candidate_Yourname__c.Email__c}"/>
+  				<apex:inputField value="{!Candidate_Yourname__c.Country__c}"/>
+  				<apex:inputField value="{!Candidate_Yourname__c.State__c}"/>
+  				<apex:inputField value="{!Candidate_Yourname__c.Expected_Salary__c}"/>
+  				<apex:inputField value="{!Candidate_Yourname__c.Application_Date__c}"/>
+  				<apex:inputField value="{!Candidate_Yourname__c.Status__c}"/>
+  				<apex:inputField value="{!Candidate_Yourname__c.Job__c}"/>
+  			</apex:pageBlockSection>
+  			<apex:pageBlockbuttons >
+  				<apex:commandButton value="Save" action="{!save}"/>
+  			</apex:pageBlockbuttons>
+  		</apex:pageBlock>
+  	</apex:form>
+</apex:page>

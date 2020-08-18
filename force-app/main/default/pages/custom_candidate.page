@@ -1,0 +1,22 @@
+<apex:page controller="CandidateInsert">
+	<apex:form id="candidateDetailsForm">
+		<apex:pageBlock id="pb">
+			<apex:pageBlockSection title="Candidate Details" id="pbs">
+  				<apex:inputField value="{!candidateDetail.Salutation__c}"/>
+  				<apex:inputField value="{!candidateDetail.First_Name__c}"/>
+  				<apex:inputField value="{!candidateDetail.Last_Name__c}"/>
+			 	<apex:inputField value="{!candidateDetail.DOB__c}"/>
+				<apex:inputField value="{!candidateDetail.Email__c}"/>
+  				<apex:inputField value="{!candidateDetail.Country__c}"/>
+  				<apex:inputField value="{!candidateDetail.State__c}"/>
+  				<apex:inputField value="{!candidateDetail.Expected_Salary__c}"/>
+  				<apex:inputField value="{!candidateDetail.Application_Date__c}"/>
+  				<apex:inputField value="{!candidateDetail.Status__c}"/>
+  				<apex:inputField value="{!candidateDetail.Job__c}"/>
+			</apex:pageBlockSection>
+			<apex:pageBlockButtons >
+				<apex:commandButton value="Insert" action="{!insertMe}"/>
+			</apex:pageBlockButtons>
+		</apex:pageBlock>
+	</apex:form>
+</apex:page>

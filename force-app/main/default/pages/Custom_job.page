@@ -1,0 +1,21 @@
+<apex:page controller="JobInsert" >
+	<apex:form id="jobDetailsForm">
+		<apex:pageBlock id="pb">
+			<apex:pageBlockSection title="Job Details">
+				<apex:inputField value="{!jd.Job_Types__c}"/>
+                <apex:inputField value="{!jd.Manager__c}"/>
+                <apex:inputField value="{!jd.Number_of_Positions__c}"/>
+                <apex:inputField value="{!jd.Description__c}"/>
+                <apex:inputField value="{!Jd.Salary_Offered__c}"/>
+				<apex:inputField value="{!Jd.Expires_On__c}"/>
+  				<apex:inputField value="{!Jd.Required_Skills__c}"/>
+  				<apex:inputField value="{!Jd.Qualification_Required__c}"/>
+  				<apex:inputField value="{!Jd.Certification_Required__c}"/>
+			</apex:pageBlockSection>
+            <apex:pageblockButtons >
+        		<apex:commandButton value="Save" action="{!insertMe}"/>
+				<apex:commandButton value="Update" action="{!updatetMe}"/>
+			</apex:pageblockButtons>
+		</apex:pageBlock>
+	</apex:form>
+</apex:page>

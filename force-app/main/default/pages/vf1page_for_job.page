@@ -1,0 +1,41 @@
+<apex:page Controller="jobValidation" sidebar="false" showHeader="false">
+
+
+<apex:stylesheet value="{!$Resource.Application_css}"/>
+<apex:includeScript value="{!$Resource.Application_js}"/>
+
+<apex:form id="form1">
+
+
+<apex:pageBlock id="pb" >
+<apex:pageBlockSection id="pbs" columns="1">
+
+
+<h1 class="top">Job Wizard</h1>
+
+
+<apex:image url="{!$Resource.Application_img }"  styleClass="logo"  width="250"/>
+
+<p class="header"><b>Job Registration </b></p>
+
+
+<br/><br/><apex:inputField id="nam" label="Name" value="{!jv.Name}" /><br/><br/>
+ <apex:inputField id="manager" label="manager" value="{!jv.Manager__c}"/><br/><br/>
+      <apex:inputField id="jobtype" label="Job Type" value="{!jv.Job_Types__c}"/><br/><br/>
+ <apex:inputField id="desc" label="Job Description" value="{!jv.Description__c}"/><br/><br/>
+ <apex:inputField id="num" label="Number Of Position" value="{!jv.Number_of_Positions__c}"/><br/><br/>
+       <apex:inputField id="exp" label="Avilable Till" value="{!jv.Expires_On__c}"/><br/><br/>
+       
+</apex:pageBlockSection>
+
+<apex:pageBlockButtons location="bottom">
+     
+      <apex:commandButton onclick="check('{!$Component.form1.pb.pbs.nam }','{!$Component.form1.pb.pbs.manager }','{!$Component.form1.pb.pbs.jobtype }','{!$Component.form1.pb.pbs.desc }','{!$Component.form1.pb.pbs.num }','{!$Component.form1.pb.pbs.exp }');"  value="save&next" styleClass="btnclass" />
+  <apex:actionFunction action="{!insertMe}" name="insertMe" reRender="none"></apex:actionFunction>
+      </apex:pageBlockButtons>
+
+</apex:pageBlock>
+
+</apex:form>
+
+</apex:page>

@@ -1,0 +1,25 @@
+<apex:page controller="Jobs">
+<apex:form >
+<apex:pageBlock >
+<apex:pageBlockSection title="Job details" >
+<apex:pageBlockTable value="{!job}" var="ct">
+<apex:column value="{!ct.Description__c}"/>
+<apex:column value="{!ct.Number_of_Positions__c}"/>
+<apex:column value="{!ct.Expires_On__c}"/>
+<apex:column value="{!ct.Active__c}"/>
+<apex:column value="{!ct.Salary_Offered__c}"/>
+<apex:column value="{!ct.Job_Types__c}"/>
+<apex:column value="{!ct.Required_Skills__c}"/>
+<apex:column value="{!ct.Qualification_Required__c}"/>
+<apex:column value="{!ct.Certification_Required__c}"/>
+<apex:column value="{!ct.Manager__c}"/>
+</apex:pageBlockTable>
+</apex:pageBlockSection>
+</apex:pageBlock>
+</apex:form>
+<apex:pageBlock >
+<apex:pageBlockSection title="Related List">
+    <c:relatedlistcomponent records="{!records}" fields="{!fields}"></c:relatedlistcomponent>
+</apex:pageBlockSection>
+        </apex:pageBlock>
+</apex:page>

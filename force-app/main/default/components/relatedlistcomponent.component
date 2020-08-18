@@ -1,0 +1,25 @@
+<apex:component >
+
+    <apex:attribute name="records" type="sobject[]" required="true" description=""/>
+
+    <apex:attribute name="fields" type="string[]" required="true" description=""/>
+
+    <table border="2" >
+
+        <apex:repeat var="item" value="{!records}">
+
+            <tr>
+
+                <apex:repeat var="fieldItem" value="{!fields}">
+
+                    <td>{!item[fieldItem]}</td>
+
+                </apex:repeat> 
+
+            </tr>
+
+        </apex:repeat> 
+
+    </table>
+
+</apex:component>
